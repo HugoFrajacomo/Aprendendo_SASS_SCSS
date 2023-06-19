@@ -1,0 +1,40 @@
+//importando variáveis de um sass externo
+@import '_variables'
+
+//variáveis em arquivo externo
+
+h1
+    color: $text-color
+    border: $border
+
+p
+    color: $text-color
+    border: $border
+
+a
+    color: $text-color
+    border: $border
+    font-size: $main-font
+    margin: #{$mx + 10px} //Utilizando #{$mx + 10px} podemos utilizar operações com variáveis
+    padding: #{$px + $py}
+
+//recursos que não existem no css
+
+div
+    p
+        //escopo local
+        $font-color: white //Se incluir um $ dentro de um bloco ele só vale para elementos dentro do bloco
+        $font2-color: green
+        // o escopo local para borda criado com o mesmo nome do escopo global fará um sombreamento a borda do escopo global que é chamada abaixo no "border". Ou seja, por mais que aplique o border com mesmo nome do global o que vai aparecer é o escopo local.
+        $border: 3px dotted green 
+        background: $bg-color
+        color: white
+        border: $border
+
+        span
+            color: $font2-color
+
+//h2
+    //color: $font-color //apresenta um erro (no console - saída) por não ter variável decladada
+
+//shadowing - Duas variáveis distintas com mesmo nome

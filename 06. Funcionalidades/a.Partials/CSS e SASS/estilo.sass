@@ -1,0 +1,45 @@
+@import '_variables'
+@import '_button'
+@import '_mixins'
+
+%font-pattern
+    font-size: 2rem
+    line-height: 1.5rem
+    text-transform: uppercase
+
+body
+    margin: 20px
+
+.p-esp
+    @include especial
+
+h2
+    @include especial
+    @include purple
+
+.esp-menor
+    @include espacamento(10px, 10px)
+    @include custom-border(dotted, blue)
+    @include colors
+    @extend %font-pattern
+    
+.esp-med
+    @include espacamento(15px, 15px)
+    @include custom-border(solid, green, 2px)
+    @include colors($background: #321)
+    @extend %font-pattern
+
+.esp-maior
+    @include espacamento(25px, 25px)
+    @include custom-border(dashed, gold, 5px)
+    @include colors($background: #369, $font: #991)
+
+$medida: 10
+
+.container-menor
+    width: 100px * $medida
+    @include custom-border(solid, green)
+
+.container-maior
+    width: 10rem * ($medida / 4)
+    @include custom-border(solid, red)

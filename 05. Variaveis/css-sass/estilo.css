@@ -1,0 +1,26 @@
+h1 {
+  color: #c4670a;
+  border: 2px solid red;
+}
+
+p {
+  color: #c4670a;
+  border: 2px solid red;
+}
+
+a {
+  color: #c4670a;
+  border: 2px solid red;
+  font-size: 3rem;
+  margin: 35px;
+  padding: 16px;
+}
+
+div p {
+  background: #ccc;
+  color: white;
+  border: 3px dotted green;
+}
+div p span {
+  color: green;
+}/*# sourceMappingURL=estilo.css.map */

@@ -1,0 +1,100 @@
+// seletor de lista no Nesting também funciona igual ao css. É só adicionar uma virgula entre os seletores que a formatação será aplicada nos 2 seletores
+    
+div, main
+    background: #b2b2b2
+
+    p, h2
+        color: blue
+
+
+// Quando aplicamos outra cor em uma linha abaixo a ultima cor será a definida
+main
+
+    .p-vermelho
+        color: red
+
+//Também podemos utilizar os simbulos (+, >. ~, entre outros) da mesma forma do css. observer que o seletor de descendencia vem antes da li. Logo é o mesmo que ol>li.
+
+li
+    color: purple
+
+ol
+
+    > li
+        color: pink
+
+
+// Utilizando o "&" desta firna não precisamos reescrever o seletor para definir um hover
+a
+    text-decoration: nome
+    color: green
+    transform: .5s
+    padding: 10px
+    border: 1px solid green
+    display: block
+    width: 150px
+    text-align: center
+
+    &:hover
+        background: green 
+        color: white
+
+.container
+    background: #ccc
+    padding: 20px
+    margin: 20px
+
+    &-content // esta forma equivale a .container-content (repete o container)
+        color: red
+
+.spacing
+    padding: 200px
+
+.btn
+    padding: 10px 20px
+    border: 1px solid blue 
+    border-radius: 5px
+    color: #fff
+    background: blue 
+    cursor: pointer
+    margin: 5px
+
+    &:hover
+        background-color: transparent
+        color: blue
+
+    &-success
+        background: green 
+        border-color: green
+
+        &:hover
+            color: green
+
+    &-danger
+        background: red 
+        border-color: red 
+
+        &:hover
+            color: red
+
+// Seletor de placeholder (não cria código no css) Porem ele cria uma base para aplicar fontatações em comum para diferentes classes
+
+%base-title-style
+    border-bottom: 2px dotted red 
+    padding: 10px
+    background: yellow 
+    text-align: center
+
+.title
+    font-size: 30px
+    color: green
+    @extend %base-title-style
+
+.sub-title 
+    font-size: 25px
+    color: blue
+    @extend %base-title-style
+
+
+
+
